@@ -5,7 +5,7 @@ import Image from "next/image"
 const Projects = memo(function Projects() {
   const mainProjects = [
     {
-      title: "E-Commerce Platform",
+      title: "FILM ARCHIEVE",
       description:
         "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment processing, and admin dashboard.",
       image: "/placeholder.svg?height=400&width=600",
@@ -14,7 +14,7 @@ const Projects = memo(function Projects() {
       githubUrl: "https://github.com/example",
     },
     {
-      title: "Task Management App",
+      title: "AI CHATBOT",
       description:
         "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: "/placeholder.svg?height=400&width=600",
@@ -23,7 +23,7 @@ const Projects = memo(function Projects() {
       githubUrl: "https://github.com/example",
     },
     {
-      title: "AI-Powered Analytics Dashboard",
+      title: "TEXT SENTIMENT ANALYSER USING C++ ",
       description:
         "An intelligent analytics dashboard that provides insights using machine learning algorithms and beautiful data visualizations.",
       image: "/placeholder.svg?height=400&width=600",
