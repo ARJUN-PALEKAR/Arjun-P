@@ -36,9 +36,11 @@ const Projects = memo(function Projects() {
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-          Featured Projects
-        </h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white drop-shadow-2xl gpu-accelerated [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
+  Featured Projects
+</h2>
+
+
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {mainProjects.map((project, index) => (

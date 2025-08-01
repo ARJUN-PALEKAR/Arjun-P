@@ -14,14 +14,16 @@ const Hero = memo(function Hero() {
         </div>
 
         <div className="pt-20">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 text-white drop-shadow-2xl gpu-accelerated">
-            Arjun Palekar
-          </h1>
-          <p className="text-xl md:text-3xl lg:text-4xl text-white mb-6 font-light drop-shadow-xl">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 text-white drop-shadow-2xl gpu-accelerated [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
+  Arjun Palekar
+</h1>
+
+
+          <p className="text-xl md:text-3xl lg:text-4xl text-white mb-6 font-light drop-shadow-xl [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
             Data Analyst | Front-End Developer
           </p>
-          <p className="text-lg md:text-xl text-white mb-8 font-light drop-shadow-xl">Web Developer</p>
-          <p className="text-base md:text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+          <p className="text-lg md:text-xl text-white mb-8 font-light drop-shadow-xl [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">Web Developer</p>
+          <p className="text-base md:text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-lg [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
             Passionate about creating beautiful, functional, and user-centered digital experiences. I bring ideas to
             life through code and design.
           </p>
@@ -34,8 +36,9 @@ const Hero = memo(function Hero() {
               View My Work
             </button>
             <button
-              onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-black hover:text-white transition-colors duration-200 shadow-lg"
+              onClick={() => window.open("https://www.linkedin.com/in/arjunpalekar", "_blank")}
+              className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-black hover:text-white transition-colors duration-200 shadow-lg [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]"
+
             >
               Get In Touch On LinkedIn
             </button>

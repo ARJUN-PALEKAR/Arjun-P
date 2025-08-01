@@ -21,7 +21,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Projects />
-        <AnimatedProjects />
+        {/* <AnimatedProjects /> */}
         <Resume />
         <Contact />
       </div>

@@ -51,29 +51,32 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white drop-shadow-2xl gpu-accelerated [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
           Get In Touch
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">Let's work together</h3>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              I'm always interested in new opportunities and exciting projects. Whether you have a question or just want
-              to say hi, feel free to reach out!
+            <h3 className="text-2xl font-bold text-white mb-6 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">Let's work together</h3>
+
+            <p className="text-white mb-8 leading-relaxed [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
+             I'm always interested in new opportunities and exciting projects. Whether you have a question or just want
+             to say hi, feel free to reach out!
             </p>
+
 
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
                 <Mail className="text-white" size={20} />
-                <span className="text-gray-300">arjunpalekar3115@gmail.com</span>
+                <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">arjunpalekar3115@gmail.com</span>
+
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="text-white" size={20} />
-                <span className="text-gray-300">+91 8610078346</span>
+                <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">+91 8610078346</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="text-white" size={20} />
+                <MapPin className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]" size={20} />
                 <span className="text-gray-300">Pune, Maharashtra</span>
               </div>
             </div>
