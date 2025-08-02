@@ -8,7 +8,7 @@ const Projects = memo(function Projects() {
       title: "FILM ARCHIEVE",
       description:
         "Film Archive is a collaborative movie database web application featuring third-party API integration for seamless access to film data. It leverages the TMDb API to deliver real-time movie information, including titles, images, and metadata, enabling easy integration into applications, websites, or research projects.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/p1img.jpg?height=400&width=600",
       technologies: ["HTML", "CSS", "JavaScript", "TMDB API"],
       liveUrl: "https://arjun-palekar.github.io/FILM-ARCHIVE/",
       githubUrl: "https://github.com/ARJUN-PALEKAR/FILM-ARCHIVE",
@@ -17,7 +17,7 @@ const Projects = memo(function Projects() {
       title: "AI CHATBOT",
       description:
         "NeuroTalk is an AI-powered chatbot built using React and Vite, integrated with OpenAI's language model to enable dynamic and intelligent conversations. It is designed for web applications, offering fast performance and a clean, modern user interface.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/p2img.jpg?height=400&width=600",
       technologies: ["React + Vite", "Node.js", "Tailwind CSS", "Open AI API", "Vercel"],
       liveUrl: "https://arjun-palekar.github.io/NeuroTalk/",
       githubUrl: "https://github.com/ARJUN-PALEKAR/NeuroTalk",
@@ -26,7 +26,7 @@ const Projects = memo(function Projects() {
       title: "TEXT SENTIMENT ANALYSER USING C++ ",
       description:
         "Text Sentiment Analyzer is a Next.js web application with a C++ backend compiled to WebAssembly, enabling fast, client-side sentiment analysis using native performance in the browser. It delivers efficient and lightweight text processing through WebAssembly, combining the power of C++, Next.js, and browser-based execution for real-time feedback and high responsiveness.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/p3img.jpg?height=400&width=600",
       technologies: ["Next JS", "Typescript", "Tailwind CSS", "Node.js", "C++", "Vercel"],
       liveUrl: "https://oodpprojectarjun.vercel.app/",
       githubUrl: "https://github.com/ARJUN-PALEKAR/OODPPROJECT",

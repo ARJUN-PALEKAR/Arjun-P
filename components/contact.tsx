@@ -76,27 +76,37 @@ export default function Contact() {
                 <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">+91 8610078346</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]" size={20} />
-                <span className="text-gray-300">Pune, Maharashtra</span>
+                <MapPin className="text-white" size={20} />
+                <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">Pune, Maharashtra</span>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <a href="https://github.com/ARJUN-PALEKAR" className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
-                <Github className="text-white" size={20} />
-              </a>
+              <a
+                href="https://github.com/ARJUN-PALEKAR"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
+              >
+          <Github className="text-white" size={20} />
+          </a>
               <a
                 href="https://www.linkedin.com/in/arjunpalekar/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
               >
                 <Linkedin className="text-white" size={20} />
               </a>
-              <a
-                href="https://twitter.com"
+             <a
+                href="https://x.com/PalekarArjun"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
               >
                 <Twitter className="text-white" size={20} />
               </a>
+
             </div>
           </div>
 
