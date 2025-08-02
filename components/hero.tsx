@@ -15,8 +15,8 @@ const Hero = memo(function Hero() {
 
         <div className="pt-20">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 text-white drop-shadow-2xl gpu-accelerated [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
-  Arjun Palekar
-</h1>
+          Arjun Pramod Palekar
+          </h1>
 
 
           <p className="text-xl md:text-3xl lg:text-4xl text-white mb-6 font-light drop-shadow-xl [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
