@@ -13,7 +13,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Arjun Palekar - Portfolio",
-  description: "Full Stack Developer & UI/UX Designer Portfolio",
+  description: "Web Developer & Data Analyst Portfolio",
     
 }
 
