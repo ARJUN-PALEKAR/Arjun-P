@@ -1,52 +1,53 @@
-"use client"
+"use client";
 
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react"
-import { useState } from "react"
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     try {
-      const res = await fetch("http://localhost:5000/contact", {
+      const res = await fetch("https://arjun-p.onrender.com/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      })
+      });
 
-      const data = await res.json()
+      const data = await res.json();
+      console.log("API response:", data); // ✅ For debugging
 
       if (data.success) {
-        alert("Message sent successfully!")
-        setFormData({ name: "", email: "", message: "" })
+        alert("✅ Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        alert("Something went wrong. Please try again.")
+        alert(`❌ ${data.error || "Something went wrong. Please try again."}`);
       }
     } catch (error) {
-      console.error("Error:", error)
-      alert("An error occurred while sending the message.")
+      console.error("Error sending form:", error);
+      alert("❌ Network error. Please try again later.");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <section id="contact" className="py-20 px-4">
@@ -57,27 +58,32 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">Let's work together</h3>
+            <h3 className="text-2xl font-bold text-white mb-6 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
+              Let's work together
+            </h3>
 
             <p className="text-white mb-8 leading-relaxed [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
-             I'm always interested in new opportunities and exciting projects. Whether you have a question or just want
-             to say hi, feel free to reach out!
+              I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!
             </p>
-
 
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
                 <Mail className="text-white" size={20} />
-                <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">arjunpalekar3115@gmail.com</span>
-
+                <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
+                  arjunpalekar3115@gmail.com
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="text-white" size={20} />
-                <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">+91 8610078346</span>
+                <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
+                  +91 8610078346
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="text-white" size={20} />
-                <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">Pune, Maharashtra</span>
+                <span className="text-gray-300 [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
+                  Pune, Maharashtra
+                </span>
               </div>
             </div>
 
@@ -88,8 +94,8 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
               >
-          <Github className="text-white" size={20} />
-          </a>
+                <Github className="text-white" size={20} />
+              </a>
               <a
                 href="https://www.linkedin.com/in/arjunpalekar/"
                 target="_blank"
@@ -98,7 +104,7 @@ export default function Contact() {
               >
                 <Linkedin className="text-white" size={20} />
               </a>
-             <a
+              <a
                 href="https://x.com/PalekarArjun"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -106,7 +112,6 @@ export default function Contact() {
               >
                 <Twitter className="text-white" size={20} />
               </a>
-
             </div>
           </div>
 
@@ -169,5 +174,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
