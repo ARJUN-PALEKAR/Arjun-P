@@ -17,7 +17,7 @@ export default function Contact() {
     setIsSubmitting(true)
 
     try {
-      const res = await fetch("https://your-backend-url.onrender.com/contact", {
+      const res = await fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
