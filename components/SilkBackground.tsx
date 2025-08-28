@@ -6,11 +6,11 @@ export default function SilkBackground() {
   return (
     <div className="fixed inset-0 z-0 pointer-events-none">
       <Silk
-        speed={20}
-        scale={1.6}
-        color="#FFFFFF"
-        noiseIntensity={10}
-        rotation={4.5}
+        speed={15}
+        scale={1}
+        color="#3434a1"
+        noiseIntensity={5.2}
+        rotation={1.79}
       />
     </div>
   );
