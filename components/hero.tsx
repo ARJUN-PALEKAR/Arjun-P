@@ -1,52 +1,98 @@
-"use client"
+"use client";
 
-import { memo } from "react"
-// import OptimizedGlobe from "./optimized-globe"
+import { memo } from "react";
+import dynamic from "next/dynamic";
+import { FlipWords } from "@/components/ui/flip-words";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+
+const SilkBackground = dynamic(() => import("./SilkBackground"), {
+  ssr: false,
+});
 
 const Hero = memo(function Hero() {
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative px-4">
-      <div className="text-center relative z-20">
-        <div className="absolute inset-0 flex items-center justify-center -z-10">
-          {/* <div className="w-[500px] h-[500px] md:w-[600px] md:h-[600px]">
-            <OptimizedGlobe />
-          </div> */}
-        </div>
+  // Words to flip through
+  const words = ["beautiful", "modern", "responsive", "data-driven"];
 
-        <div className="pt-20">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 text-white drop-shadow-2xl gpu-accelerated [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
-          Arjun Palekar
+  return (
+    <section
+      id="home"
+      className="relative h-screen overflow-hidden bg-black flex items-center"
+    >
+      {/* Silk background */}
+      <div className="absolute inset-0 z-0">
+        <SilkBackground />
+      </div>
+
+      {/* Hero content */}
+      <div className="relative z-20 container mx-auto px-6 md:px-20 lg:px-32 flex flex-col justify-center h-full">
+        <div className="max-w-4xl">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-10 text-white drop-shadow-2xl text-left tracking-tighter">
+            Arjun Palekar
           </h1>
 
-
-          <p className="text-xl md:text-3xl lg:text-4xl text-white mb-6 font-light drop-shadow-xl [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
+          <p className="text-xl md:text-3xl lg:text-4xl text-white mb-6 font-light text-left">
             Data Analyst | Front-End Developer
           </p>
-          <p className="text-lg md:text-xl text-white mb-8 font-light drop-shadow-xl [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">Web Developer</p>
-          <p className="text-base md:text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-lg [text-shadow:_2px_2px_4px_#000,_-2px_-2px_4px_#000]">
-            Passionate about creating beautiful, functional, and user-centered digital experiences. I bring ideas to
-            life through code and design.
+
+          <p className="text-lg md:text-xl text-neutral-400 mb-12 font-light text-left tracking-wide">
+            Aspiring Full-stack Developer & Data Analyst
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors duration-200 shadow-lg"
-            >
-              View My Work
-            </button>
-            <button
-              onClick={() => window.open("https://www.linkedin.com/in/arjunpalekar", "_blank")}
-              className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-black hover:text-white transition-colors duration-200 shadow-lg [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]"
+          {/* BIO WITH FLIP WORDS */}
+          <div className="text-base md:text-xl text-gray-300 mb-14 leading-loose text-left max-w-2xl">
+            Bridging the gap between complex data and interactive design.
+            <br className="hidden md:block" />
+            I build digital experiences that are
+            <FlipWords words={words} className="text-white font-semibold" />
+          </div>
 
+          {/* SHIMMER BUTTONS */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-start">
+            
+            {/* Button 1: View My Work */}
+            <ShimmerButton
+              className="shadow-2xl"
+              // ADDED THESE PROPS FOR VISIBILITY
+              shimmerColor="#ffffff" 
+              shimmerSize="2px"
+              borderRadius="100px"
+              background="black"
+              onClick={() =>
+                document
+                  .querySelector("#projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
-              Get In Touch On LinkedIn
-            </button>
+              <span className="text-center text-sm font-medium leading-none tracking-tight text-white lg:text-base px-4">
+                View My Work
+              </span>
+            </ShimmerButton>
+
+            {/* Button 2: Let's Connect */}
+            <ShimmerButton
+              className="shadow-2xl"
+              // ADDED THESE PROPS FOR VISIBILITY
+              shimmerColor="#ffffff" 
+              shimmerSize="2px"
+              borderRadius="100px"
+              background="black"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/arjunpalekar",
+                  "_blank"
+                )
+              }
+            >
+              <span className="text-center text-sm font-medium leading-none tracking-tight text-white lg:text-base px-4">
+                Let&apos;s Connect
+              </span>
+            </ShimmerButton>
+            
           </div>
         </div>
       </div>
     </section>
-  )
-})
+  );
+});
 
-export default Hero
+export default Hero;
