@@ -4,7 +4,7 @@ import Silk from "./rb";
 
 export default function SilkBackground() {
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none">
+    <div className="absolute inset-0 z-0 pointer-events-none">
       <Silk
         speed={15}
         scale={1}

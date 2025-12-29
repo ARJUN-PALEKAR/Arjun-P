@@ -61,6 +61,7 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      // --- UPDATED KEYFRAMES SECTION ---
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -70,13 +71,36 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "shimmer-slide": {
+          to: {
+            transform: "translate(calc(100cqw - 100%), 0)",
+          },
+        },
+        "spin-around": {
+          "0%": {
+            transform: "translateZ(0) rotate(0)",
+          },
+          "15%, 35%": {
+            transform: "translateZ(0) rotate(90deg)",
+          },
+          "65%, 85%": {
+            transform: "translateZ(0) rotate(270deg)",
+          },
+          "100%": {
+            transform: "translateZ(0) rotate(360deg)",
+          },
+        },
       },
+      // button animation updated
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "spin-slow": "spin 3s linear infinite",
+        "shimmer-slide":
+          "shimmer-slide var(--speed) ease-in-out infinite alternate",
+        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
