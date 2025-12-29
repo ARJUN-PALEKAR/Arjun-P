@@ -21,9 +21,9 @@ app.post("/contact", async (req, res) => {
 
   try {
     await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>", // Use their dev domain for now
+      from: "Portfolio Form <onboarding@resend.dev>", // Use their dev domain for now
       to: process.env.EMAIL_RECEIVER,
-      subject: `New message from ${name}`,
+      subject: `You've got a message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     })
 
